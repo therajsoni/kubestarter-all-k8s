@@ -75,7 +75,9 @@
     ```bash
     kubectl set image deployment/online-shop online-shop=amitabhdevops/online_shop_without_footer -n recreate-ns
     
-    kubectl apply -f . 
+    kubectl apply -f .
+
+    kubectl port-forward --address 0.0.0.0 svc/recreate-service 3000:3000 -n recreate-ns &
     ```
 
 - or, You can only apply deployment file
